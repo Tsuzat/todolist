@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} WebApp | Home {% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css'%}">
+{% endblock %}
+
+{% block body %}  
+    <div class="body">
+        <h2>DEVELOPER'S NOTE</h2>
+        <div class="about-projects">
+            <h3>ABOUT THIS PROJECT</h3>
+            <p>
+                This project is made under personal interest. Web Framework used is Django. This WebApp has user
+                specific data and made secure as much as possible, yet it is recommended to not to put
+                serius data in the database. Database used is sqlite3 which is default functionality of Django.
+                Application is deployed in Heroku. This is an open source project, source code is available in my
+                <a href="https://github.com/Tsuzat/todolist-webApp" target="_blank">GitHub</a>. <span>The website is not
+                    highly optimized for mobile devices.
+                </span>
+ 
+            </p>
+        </div>
+        <div class="todolist">
+            <h3>TO DO LISTS</h3>
+            <p>
+                Click on Todolists to access your lists. You can create a new list but filling up name 
+                and description. Newly created list will show up immediately on the page. By clicking on it, you'll be 
+                redirected to the "items" page, where you can add a task. Any type of deletion is immediate and will
+                affect the database permanently. In other words, Any deletion can not be UNDO; So be careful about
+                what you delete.
+
+            </p>
+        </div>
+        <div class="login">
+            <h3>LOGIN AND PAGE ACCESS</h3>
+            <p>
+                Todolists and items in it can only be accessed after authenticated login. If you are not registered,
+                you first need to register. For now, if you forget your password, there's no password reset option, 
+                so you might need to remember it.
+
+            </p>
+        </div>
+    </div>
+{% endblock %}

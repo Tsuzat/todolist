@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+.body h2{
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size: 30px;
+    font-family: "Kanit";
+}
+
+.body .all-tasks{
+    display:flex;
+    margin: 5px auto;
+    
+    flex-wrap: wrap;
+}
+
+.all-tasks > *{
+    flex: 1 1 20em;
+    margin: 20px 20px;
+}
+
+.body .all-tasks div{
+    box-sizing: border-box;
+    width: 30%;
+    background-color:rgba(167, 167, 167,0.3);
+    border: 5px solid rgba(63, 61, 61,0.1);
+    border-radius: 10px;
+    padding:2px 20px;
+}
+.body .all-tasks div #boder-bottom{
+    box-sizing: border-box;
+    display:flex;
+    align-items:center;
+}
+
+.body .all-tasks div h4{
+    position:relative;
+    left:35%;
+    bottom:15px;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    letter-spacing:1px;
+}
+
+.body .all-tasks div ul{
+    list-style: none;
+    font-size: 15px;
+    position: relative;
+    bottom:30px;
+}
+
+.body .all-tasks div ul li{
+    position:relative;
+}
+
+.body .all-tasks div ul li{
+    font-weight: 600;
+    display:flex;
+    font-family: "Open Sans Condensed";
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 5px;
+    background-color: rgba(158, 219, 77, 0.4);
+    padding:1px 2px;
+}
+
+.body .all-tasks div ul li button{
+    background-color: rgb(255, 151, 66);
+    height:20px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.create-new{
+    background-color:rgba(167, 167, 167,0.3);
+    border: 5px solid rgba(63, 61, 61,0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px 0px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction: column;
+}
+
+.create-new form p{
+    padding:0px 15px;
+    font-size: 18px;
+    font-family: "Kanit";
+}
+.create-new form p input{
+    outline: none;
+    border: none;
+    background-color:rgba(167, 167, 167,0);
+    border-bottom: 1px solid black;
+}
+
+.create-new form p button{
+    background-color: rgb(255, 151, 66);
+    height:20px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.create-new h3{
+    font-family: "Bree Serif";
+    font-size: 17px;
+    font-weight: 100;
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+.body{
+    box-sizing: border-box;
+    margin: 50px auto;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color:rgba(167, 167, 167,0.3);
+    border: 5px solid rgba(63, 61, 61,0.1);
+    border-radius: 10px;
+}
+
+.body form{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+}
+
+.body form > *{
+    margin: 10px auto;
+}
+
+input{
+    outline:none;
+    border: 2px solid rgb(107, 107, 107);
+    padding: 2px 5px;
+    border-radius: 15px;
+    height:25px;
+    width:110px;
+    transition: width 300ms ease;
+}
+
+input:focus{
+    width: 175px;
+}
+
+.body form button{
+    background-color: rgb(255, 151, 66);
+    border:none;
+    color:#fff;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.body form div{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.body form div label{
+    font-size:17px;
+    font-family: "Baloo Tammudu 2";
+    position: relative;
+    top:4px;
+    right: 4px;
+}
+
+.body .content{
+    font-size:17px;
+    font-family: "Baloo Tammudu 2";
+}
+.body .content a{
+    text-decoration: none;
+    color:rgb(188, 11, 194);
+}
+
+.body form .error{
+    font-family: "Baloo Tammudu 2";
+    color: red;
+}
+
+.body form .message{
+    font-family: "Baloo Tammudu 2";
+    color: green;
+}

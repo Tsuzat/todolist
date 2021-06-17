@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}WebApp | Log In{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+{% endblock %}
+
+{% block body %} 
+    <div class="body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="username">
+                <label for="name">Username: </label>
+                <input type="text" name="username" autocomplete="off" required>
+            </div>
+
+            <div class="password">
+                <label for="password">Password: </label>
+                <input type="password" name="password" autocomplete="off" required>
+            </div>
+
+            <div class="content">
+                <p>Not a member? Register <a href="/register">Here</a></p>
+                <p><a href="">Forget Password?</a></p>
+            </div>
+
+            <div class="error">
+                {% for message in messages %}
+                    {% if message.tags == 'error' %}
+                        <p>{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <button type="submit" name="login">Log In</button>
+
+            <div class="message">
+                {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                        <p>{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+        </form>
+
+    </div>
+{% endblock %}

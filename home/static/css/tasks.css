@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+.body .heading{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:30px;
+    font-family: "Kanit";
+}
+
+.body ul{
+    width:80%;
+    margin: 0px auto;
+}
+
+.body ul a{
+    text-decoration: none;
+}
+
+.body ul li{
+    box-sizing: border-box;
+    width:80%;
+    background-color:rgba(167, 167, 167,0.3);
+    margin: 15px auto;
+    border: 5px solid rgba(63, 61, 61,0.1);
+    border-radius: 10px;
+    list-style: none;
+}
+
+.body ul li h4{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size:20px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    color: rgb(182, 0, 158);
+    position: relative;
+    bottom:20px;
+}
+
+.body ul li .content{
+    width:90%;
+    margin: -35px auto 0 auto;
+}
+
+.body ul li .content p{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Benne";
+    font-weight: 700;
+    font-size: 15px;
+    margin:0px auto;
+}
+
+.body ul li .content .created{
+    width:40%;
+    font-weight: 900;
+    font-size: 17px;
+    color: rgb(39, 107, 103);
+}
+
+.body ul li h4:hover{
+    position:relative;
+    left:1px;
+    bottom:21px;
+    color:rgb(241, 158, 50)
+}
+
+.body ul li form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3px auto;
+}
+.body ul li form .buttons button{
+    background-color: rgb(255, 151, 66);
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    height:25px;
+    border-radius:5px;
+}
+
+.body .create-new{
+    width:80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    padding:10px;
+    box-sizing: border-box;
+    background-color:rgba(167, 167, 167,0.3);
+    border: 5px solid rgba(63, 61, 61,0.1);
+    border-radius: 10px;
+}
+.body .create-new h3{
+    font-size:20px;
+    font-family: "Benne" ;
+    border-bottom: 2px solid black;
+}
+
+.body .create-new form div, .body .create-new form button {
+    margin: 10px auto;
+}
+
+.body .create-new form div label{
+    font-size:15px;
+    font-family: "Bree Serif";
+    font-weight:100;
+}
+
+.body .create-new form div input{
+    outline:none;
+    border: none;
+    background-color:rgba(167, 167, 167,0);
+    border-bottom: 3px solid rgba(63, 61, 61,0.5);
+}
+
+.body .create-new form button{
+    background-color: rgb(255, 151, 66);
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    width: 30%;
+    height:25px;
+    border-radius:10px;
+}
+
+

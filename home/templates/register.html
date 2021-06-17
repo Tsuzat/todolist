@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}WebApp | Register{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+{% endblock %}
+
+{% block body %} 
+<div class="body">
+    <form method="post">
+        {% csrf_token %}
+        <div class="username">
+            <label for="name">Username: </label>
+            {{form.username}}
+        </div>
+
+        <div class="email">
+            <label for="password">Email: </label>
+            {{form.email}}
+        </div>
+
+        <div class="password1">
+            <label for="password1">Password: </label>
+            {{form.password1}}
+        </div>
+
+        <div class="password2">
+            <label for="password2">Confirm Password: </label>
+            {{form.password2}}
+        </div>
+
+        <div class="error">
+            {{form.errors}}
+        </div>
+        
+        <div class="content">
+            <p>Already a member? <a href="/login">Log In</a></p>
+        </div>
+
+        <button type="submit" name="login">Log In</button>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} ToDoLists {% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/items.css'%}">
+{% endblock %}
+
+{% block body %} 
+
+    <div class="body">
+        
+        <h2 class="heading">{{task.name}}'s items</h2>
+        
+        <div class="all-tasks">
+            <div class="tasks">
+                <span id="boder-bottom">
+                    <h4>Tasks</h4>
+                </span>
+                <ul>
+                    {% for item in items %}
+                        {% if not item.processing and not item.complete %}
+                            <li>
+                                {{item.description}}
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" name="in-process" value="{{item.id}}">Doing</button>
+                                    <button type="submit" name="delete" value="{{item.id}}">Delete</button>
+                                </form>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+            </div>
+            
+            <div class="processing">
+                <span id="boder-bottom">
+                    <h4>In Process</h4>
+                </span>
+                <ul>
+                    {% for item in items %}
+                        {% if item.processing and not item.complete %}
+                            <li>
+                                {{item.description}}
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" name="complete" value="{{item.id}}">Done</button>
+                                    <button type="submit" name="delete" value="{{item.id}}">Delete</button>
+                                </form>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="completed">
+                <span id="boder-bottom">
+                    <h4>Completed</h4>
+                </span>
+                <ul>
+                    {% for item in items %}
+                        {% if item.processing and item.complete %}
+                            <li>
+                                {{item.description}}
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" name="delete" value="{{item.id}}">Delete</button>
+                                </form>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="create-new">
+            <h3>ADD A NEW TASK</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <p> Title <input type="text" name="description" autocomplete="off" required> <p>
+                <button type="submit" name="submit" value="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}
