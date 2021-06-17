@@ -1,6 +1,6 @@
 # todolist
  todolist webapp
-<p> This website is made under personal interest, using Django. <a href="https://todolist-tsuzat.herokuapp.com/" target="_black"> </p>
+<p> This website is made under personal interest, using Django. <a href="https://todolist-tsuzat.herokuapp.com/" target="_black">Visit me</a> </p>
 <h3>Future Update</h3>
 <ul>
  <li> User password reset field</li>
